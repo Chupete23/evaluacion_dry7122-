@@ -1,0 +1,12 @@
+# Solicitar número de puerto al usuario
+puerto = int(input("Ingrese el número de puerto: "))
+
+# Verificar el rango del puerto
+if 0 <= puerto <= 1023:
+    print("Puerto bien conocido: 0 - 1023")
+elif 1024 <= puerto <= 49151:
+    print("Puerto registrado: 1024 - 49151")
+elif 49152 <= puerto <= 65535:
+    print("Puerto dinámico o privado: 49152 - 65535")
+else:
+    print("El número ingresado no corresponde a un puerto válido.")
